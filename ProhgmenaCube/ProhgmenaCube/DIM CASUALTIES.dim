@@ -1,0 +1,140 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f6151b79-699b-4a63-afd2-df7fb138f9d1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM CASUALTIES</ID>
+  <Name>DIM CASUALTIES</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b0c64d50-3860-4d63-a5ef-34bff364b346">
+    <DataSourceViewID>Prohgmena</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="0440b47e-64ff-4737-9bb8-edec845697df">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="007f5f88-c2a1-479d-aa31-0471eadd29ac">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6c069b2-dd8b-4a8d-b02c-c0aae72b7013">
+          <DataType>WChar</DataType>
+          <DataSize>14</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32d5c145-870a-4699-aaa0-ec6c6d0f1eda">
+            <TableID>dbo_DIM_CASUALTIES</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="8806d547-cd08-4ff6-88e2-3300ee0877d2">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="935c686f-a181-47e4-916e-23e648b03bdc">
+            <TableID>dbo_DIM_CASUALTIES</TableID>
+            <ColumnID>veh_id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="70781050-e4d2-4c41-86e3-096c7c2ef0f5">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="971684e8-1d18-4a4b-b4ca-6ec9799638cb">
+            <TableID>dbo_DIM_CASUALTIES</TableID>
+            <ColumnID>cas_ref</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d1fddb33-3db9-4bce-9673-34c2ba80fe2c">
+        <DataType>WChar</DataType>
+        <DataSize>22</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="54ab6a99-255b-415a-b4f9-cbe2671c8e44">
+          <TableID>dbo_DIM_CASUALTIES</TableID>
+          <ColumnID>cas_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="75076bc4-caa3-4b0f-b642-b39fb6a81a6a">
+          <AttributeID>Cas Sex</AttributeID>
+          <Name>Cas Sex</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="98caa5d9-ee3a-4d6b-b8b6-4352c800d49a">
+          <AttributeID>Cas Sev</AttributeID>
+          <Name>Cas Sev</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="237d2292-fee7-4eb9-a902-b17a4c5c2203">
+      <ID>Cas Sex</ID>
+      <Name>Cas Sex</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="409cea2a-c97e-4e0a-93e5-a722bb40fad3">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24823c40-3aa4-432b-8cc7-da52057d5d21">
+            <TableID>dbo_DIM_CASUALTIES</TableID>
+            <ColumnID>cas_sex</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="da729496-f2e1-4222-9c92-443016198628">
+      <ID>Cas Sev</ID>
+      <Name>Cas Sev</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7c22fe93-da83-467f-a855-be8b0ed55b1d">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c163f24-d4a9-4038-94d7-ef0972247a07">
+            <TableID>dbo_DIM_CASUALTIES</TableID>
+            <ColumnID>cas_sev</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

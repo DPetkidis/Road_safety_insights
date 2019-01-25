@@ -1,0 +1,153 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cb9e5a47-1858-447b-867c-0df46f5180a4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM AGE SEX DRIVER</ID>
+  <Name>DIM AGE SEX DRIVER</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3adff443-bd38-48f5-9bbb-0f21c736d589">
+    <DataSourceViewID>Prohgmena</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="78d29ece-0e63-4736-a965-4fd1d9f5a411">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="6668d022-26be-41b7-bc2d-7496ea2783b5">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17522e18-eb58-4eb4-8f44-3313fc5c53d2">
+          <DataType>WChar</DataType>
+          <DataSize>14</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="120b46bc-ad0f-4ef1-97e9-0fb30caac03e">
+            <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="1fab736a-a186-4aa1-a7de-576cef864e98">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="45f3b51d-5edd-4a40-a4f9-c12d9241fa23">
+            <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+            <ColumnID>veh_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="464736d2-0733-470e-9327-05628da812b2">
+        <DataType>WChar</DataType>
+        <DataSize>18</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9c5c19bc-c42b-40cb-9b82-7a2d81f38514">
+          <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+          <ColumnID>age_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c82ec2da-074a-498d-a8d4-15870fe9c0c9">
+          <AttributeID>Dr Sex</AttributeID>
+          <Name>Dr Sex</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7df82170-1edf-481f-b26b-f3182379f2ed">
+          <AttributeID>Dr Age</AttributeID>
+          <Name>Dr Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fadf70de-c258-4a34-9083-8b235cac2f0e">
+          <AttributeID>Dr Age Band</AttributeID>
+          <Name>Dr Age Band</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f627bbf1-4103-47a1-a7a1-711fdf803985">
+      <ID>Dr Sex</ID>
+      <Name>Dr Sex</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6a2b14e-2fbb-4651-b47b-587f1dffe0ec">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="76cbc598-319c-4297-b69f-c0dc42afe406">
+            <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+            <ColumnID>dr_sex</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="07d18b69-e692-4050-8c1c-166c35d292ed">
+      <ID>Dr Age</ID>
+      <Name>Dr Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e1645e1-3ba8-42d4-8dd3-f75e2b51aa40">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83a1f6c1-d0bb-4f9a-80a2-77f62259802e">
+            <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+            <ColumnID>dr_age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="422ee66f-fab0-4024-a0a1-77f95a259c22">
+      <ID>Dr Age Band</ID>
+      <Name>Dr Age Band</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f5a836be-1a54-46de-b453-b149c5b42b5c">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75bcc64b-f225-4520-a4e1-b69249610b8d">
+            <TableID>dbo_DIM_AGE_SEX_DRIVER</TableID>
+            <ColumnID>dr_age_band</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

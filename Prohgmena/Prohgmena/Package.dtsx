@@ -1,0 +1,2601 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2017 1:51:05 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MEMAS-HP"
+  DTS:CreatorName="Memas-HP\Memas"
+  DTS:DTSID="{FD510212-E604-4AC0-8DF3-0F6FDC8B63C0}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LocaleID="1032"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="211"
+  DTS:VersionGUID="{CBFC27D1-D8D2-4AEC-BC19-9A8FA7C091A5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[accidents_manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DFD241B2-5C2D-4B72-9E74-8C0944C929AA}"
+      DTS:ObjectName="accidents_manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::filepath]+"Accidents.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1032"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1253"
+          DTS:ConnectionString="C:\Users\Memas\Desktop 2\Advanced-Information-Systems\Prohgmena\datasets\Accidents.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{4C377B2E-A1F3-4819-8A46-EFDD54102B07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Easting_OSGR"
+              DTS:DTSID="{612036AC-1FC4-4CC2-BB58-7835DDA5FE11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location_Northing_OSGR"
+              DTS:DTSID="{5CB8D3A9-4CE6-41B2-BF78-96BF7B557285}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{A587C86E-A212-4A4A-8D9B-A48620021735}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{22C4EE9B-D280-4EA6-BF38-64584CEEE6A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Police_Force"
+              DTS:DTSID="{AD18182B-BE8B-4E7D-B923-B537F85BDBC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Severity"
+              DTS:DTSID="{3161EC72-1BEF-4953-83B3-F596EA16D5AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Vehicles"
+              DTS:DTSID="{527772CE-F5A1-432E-ADB9-53DFFD50CEB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number_of_Casualties"
+              DTS:DTSID="{B752A350-06FB-4810-8A29-27CD2F40F839}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{B8BF54B8-325C-4CF5-A52F-306224D5387E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Day_of_Week"
+              DTS:DTSID="{742FDAE2-283D-4243-8B85-A62A5BC02710}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="134"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time"
+              DTS:DTSID="{19F842E9-F8E3-4B12-9CE4-4A4B7562806E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(District)"
+              DTS:DTSID="{FFCB6592-1345-47DB-A938-07D6369272A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Local_Authority_(Highway)"
+              DTS:DTSID="{216FEEAA-A800-433A-BD6A-8852B7DAC535}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Class"
+              DTS:DTSID="{78C967AF-793F-459E-9270-376F95F7B941}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Road_Number"
+              DTS:DTSID="{21C6B366-B87B-42CF-8E57-1216301266CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Type"
+              DTS:DTSID="{96F7FF80-8ABD-4636-B8F0-2D16A7C724FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Speed_limit"
+              DTS:DTSID="{44A0B21C-6E5B-4A82-86DD-D8E26D98CE76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Detail"
+              DTS:DTSID="{52656879-79B6-4FBD-9F7C-8DBF261FAA2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Control"
+              DTS:DTSID="{17A35FB7-8497-4CEB-A30B-7EF408D046E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Class"
+              DTS:DTSID="{F89F6B7D-D78D-4BA7-934D-D78B6263A11F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2nd_Road_Number"
+              DTS:DTSID="{2C2D7720-BCDD-48C8-A22E-B068977C831B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Human_Control"
+              DTS:DTSID="{B79CA518-0794-4AE5-B388-827A9867A9AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
+              DTS:DTSID="{BA848C61-91C1-4C2E-BF83-242EBE450877}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Light_Conditions"
+              DTS:DTSID="{B7C88C9E-423B-4C59-BB2A-E2D8AF55444D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weather_Conditions"
+              DTS:DTSID="{835CBCFC-0C54-45B2-8775-1A3504ADC702}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Road_Surface_Conditions"
+              DTS:DTSID="{9FD0B571-7F33-4559-B3E5-FF283359C47B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Special_Conditions_at_Site"
+              DTS:DTSID="{389E2821-D91D-4834-A178-77AB57B3314D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carriageway_Hazards"
+              DTS:DTSID="{90C76880-D580-40B4-996F-92FA1264F270}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Urban_or_Rural_Area"
+              DTS:DTSID="{9DF763C1-B0BF-4049-AEFD-3F4889522A0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
+              DTS:DTSID="{E93CEFB1-33B5-4584-B122-B33128D6B449}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA_of_Accident_Location"
+              DTS:DTSID="{2847BBF2-F552-4CDB-8993-6293E235472C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[casualties_manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DF350CDB-B68F-4D2E-8B0A-EF6459ED73D2}"
+      DTS:ObjectName="casualties_manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::filepath]+"Casualties.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1032"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1253"
+          DTS:ConnectionString="C:\Users\Memas\Desktop 2\Advanced-Information-Systems\Prohgmena\datasets\Casualties.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{854AB750-EBE7-4E37-9F14-C672F99D22D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{512587A2-1F8F-43E6-BA16-E67B9A4BFF16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Reference"
+              DTS:DTSID="{5664A972-F1B6-49BB-9EA9-F61AAC251404}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Class"
+              DTS:DTSID="{2699C966-E80B-4F62-8A6D-52D208C547E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Casualty"
+              DTS:DTSID="{A52330F2-4405-4034-A1B9-D279383057FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Casualty"
+              DTS:DTSID="{4085DA23-8279-4CD6-9394-F749AB3AC198}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Casualty"
+              DTS:DTSID="{26FC337C-6AE2-4396-8D75-6CC89D46A079}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Severity"
+              DTS:DTSID="{50B130F5-FE25-4794-9D19-893005E012E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Location"
+              DTS:DTSID="{25CB0110-1692-4615-BEB3-DABDFB9DD1EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Movement"
+              DTS:DTSID="{C236E309-448B-47F6-B01E-F2F456CDBC95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Car_Passenger"
+              DTS:DTSID="{31237D8B-8AB6-4B7D-B748-650CF948D520}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bus_or_Coach_Passenger"
+              DTS:DTSID="{7E9BC16B-E2F9-4DC1-B197-7E78B270CC7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
+              DTS:DTSID="{C58AC901-F28B-4793-8581-182ED1E222C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Type"
+              DTS:DTSID="{8DF92427-17C4-4C01-911E-1A0C37BEEF91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Casualty_Home_Area_Type"
+              DTS:DTSID="{1C56017D-7813-48E8-842A-85E1099A16CD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DB_connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5FE8842C-0BCB-470F-B546-F13FCFE974A5}"
+      DTS:ObjectName="DB_connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MEMAS-HP;Initial Catalog=Prohgmena;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vehicles_manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2047F0BE-3990-4F83-B096-098CA9713B67}"
+      DTS:ObjectName="vehicles_manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::filepath]+"Vehicles.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1032"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1253"
+          DTS:ConnectionString="C:\Users\Memas\Desktop 2\Advanced-Information-Systems\Prohgmena\datasets\Vehicles.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accident_Index"
+              DTS:DTSID="{20CA56D9-4117-4855-A2B1-F573C1870495}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Reference"
+              DTS:DTSID="{18D64DA2-CDA5-4434-90C4-0B7DF8D687E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Type"
+              DTS:DTSID="{0562AC7C-EF28-4EEA-AC7A-4C506DB4CE58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Towing_and_Articulation"
+              DTS:DTSID="{81CBCAB0-6D20-45D5-96C1-AD12378E160D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Manoeuvre"
+              DTS:DTSID="{3453F5CF-C4AF-471A-B3C2-F1223EE70E31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
+              DTS:DTSID="{F77F327B-035F-4FE9-BA1B-BA925C699BC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Junction_Location"
+              DTS:DTSID="{B9C25221-B099-429C-8F08-751243FF4267}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Skidding_and_Overturning"
+              DTS:DTSID="{B2F66E30-5D69-46FA-A9F1-59C33F2697B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_in_Carriageway"
+              DTS:DTSID="{C44FE02A-3E1D-475B-8013-7747DEC4DD31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Vehicle_Leaving_Carriageway"
+              DTS:DTSID="{F4644FA7-C5C2-4C84-9E23-6DCEC1428610}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hit_Object_off_Carriageway"
+              DTS:DTSID="{A32A1E34-97B7-463B-8A6A-29235CBBB612}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1st_Point_of_Impact"
+              DTS:DTSID="{2A28FD50-689B-406E-8628-2A2016049CB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
+              DTS:DTSID="{3A6FC14E-49DB-42E9-A545-B524F4C55071}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Journey_Purpose_of_Driver"
+              DTS:DTSID="{B0492CA7-A911-49F6-91A8-580B4ED2B731}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex_of_Driver"
+              DTS:DTSID="{76751B8E-BF93-4C62-B518-0766EF0F77CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Driver"
+              DTS:DTSID="{D7837332-A600-4F95-9025-83D9D8A8CE03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_Band_of_Driver"
+              DTS:DTSID="{29AD8E4A-BC11-4D7A-8C50-8F915CD32EA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Engine_Capacity_(CC)"
+              DTS:DTSID="{80A29EA8-D4A9-4D4F-A6B4-FF485E5BA7A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Propulsion_Code"
+              DTS:DTSID="{11235C4B-B63B-4873-A260-ADFF304EB389}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age_of_Vehicle"
+              DTS:DTSID="{3E1DF361-C37E-451D-B00B-7B051FF6895D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_IMD_Decile"
+              DTS:DTSID="{58CFD336-EAC6-401C-B566-E5D6F95D244F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Driver_Home_Area_Type"
+              DTS:DTSID="{68BF5865-A9F9-4C93-AE63-6381B9A28ABB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cleanup DB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D13AF41A-073A-440D-BB49-25BF596FD647}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cleanup DB"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5FE8842C-0BCB-470F-B546-F13FCFE974A5}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DELETE FROM Accidents WHERE id IN ( SELECT ac.id FROM Accidents as ac LEFT JOIN Casualties as c ON c.acc_id = ac.id WHERE c.acc_id is NULL);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Accidents' data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{49E131DE-2DB7-41A1-8D1B-C2818E7FCE9F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="2057"
+      DTS:ObjectName="Import Accidents' data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Accidents' data\Accidents"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1032"
+              name="Accidents"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Accidents' data\Accidents.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[accidents_manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[accidents_manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="14"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Time]"
+                      dataType="dbTime"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Time]"
+                      name="Time"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Type]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Type]"
+                      name="Road_Type"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
+                      name="Weather_Conditions"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
+                      name="Road_Surface_Conditions"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Police_Force]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Police_Force]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Police_Force]"
+                      name="Police_Force"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Severity]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Severity]"
+                      name="Accident_Severity"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      name="Did_Police_Officer_Attend_Scene_of_Accident"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
+                      name="Local_Authority_(District)"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Location_Easting_OSGR]"
+                      dataType="i4"
+                      name="Location_Easting_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Location_Northing_OSGR]"
+                      dataType="i4"
+                      name="Location_Northing_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      dataType="r4"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      dataType="r4"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Police_Force]"
+                      dataType="i1"
+                      name="Police_Force" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
+                      dataType="i1"
+                      name="Accident_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
+                      dataType="i1"
+                      name="Number_of_Vehicles" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
+                      dataType="i1"
+                      name="Number_of_Casualties" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
+                      dataType="i1"
+                      name="Day_of_Week" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Time]"
+                      dataType="dbTime"
+                      name="Time" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
+                      dataType="i2"
+                      name="Local_Authority_(District)" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
+                      codePage="1253"
+                      dataType="str"
+                      length="9"
+                      name="Local_Authority_(Highway)" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Class]"
+                      dataType="i1"
+                      name="1st_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Number]"
+                      dataType="i2"
+                      name="1st_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
+                      dataType="i1"
+                      name="Road_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
+                      dataType="i1"
+                      name="Speed_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Junction_Detail]"
+                      dataType="i1"
+                      name="Junction_Detail" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Junction_Control]"
+                      dataType="i1"
+                      name="Junction_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Class]"
+                      dataType="i1"
+                      name="2nd_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Number]"
+                      dataType="i2"
+                      name="2nd_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Human_Control]"
+                      dataType="i1"
+                      name="Pedestrian_Crossing-Human_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
+                      dataType="i1"
+                      name="Pedestrian_Crossing-Physical_Facilities" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
+                      dataType="i1"
+                      name="Light_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
+                      dataType="i1"
+                      name="Weather_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      dataType="i1"
+                      name="Road_Surface_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Special_Conditions_at_Site]"
+                      dataType="i1"
+                      name="Special_Conditions_at_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Carriageway_Hazards]"
+                      dataType="i1"
+                      name="Carriageway_Hazards" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
+                      dataType="i1"
+                      name="Urban_or_Rural_Area" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      dataType="i1"
+                      name="Did_Police_Officer_Attend_Scene_of_Accident" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
+                      codePage="1253"
+                      dataType="str"
+                      length="9"
+                      name="LSOA_of_Accident_Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Accidents' data\Accidents DB Insert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Accidents DB Insert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Accidents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1253</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Accidents' data\Accidents DB Insert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DB_connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB_connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Time]"
+                      cachedDataType="dbTime"
+                      cachedName="Time"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Time]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Road_Surface_Conditions]"
+                      cachedDataType="i1"
+                      cachedName="Road_Surface_Conditions"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Road_surface]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Weather_Conditions]"
+                      cachedDataType="i1"
+                      cachedName="Weather_Conditions"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Weather_cond]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Weather_Conditions]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Road_Type]"
+                      cachedDataType="i1"
+                      cachedName="Road_Type"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Road_type]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Road_Type]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Police_Force]"
+                      cachedDataType="i1"
+                      cachedName="Police_Force"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Police_force]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Police_Force]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      cachedDataType="i1"
+                      cachedName="Did_Police_Officer_Attend_Scene_of_Accident"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Police_attend]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Accident_Severity]"
+                      cachedDataType="i1"
+                      cachedName="Accident_Severity"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Severity]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Accident_Severity]" />
+                    <inputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].Columns[Local_Authority_(District)]"
+                      cachedDataType="i2"
+                      cachedName="Local_Authority_(District)"
+                      externalMetadataColumnId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      lineageId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      dataType="dbTime2"
+                      name="Time"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Road_type]"
+                      dataType="ui1"
+                      name="Road_type" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Weather_cond]"
+                      dataType="ui1"
+                      name="Weather_cond" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Road_surface]"
+                      dataType="ui1"
+                      name="Road_surface" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Police_force]"
+                      dataType="ui1"
+                      name="Police_force" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Police_attend]"
+                      dataType="ui1"
+                      name="Police_attend" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[Severity]"
+                      dataType="ui1"
+                      name="Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      dataType="i2"
+                      name="District" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Accidents' data\Accidents DB Insert.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Accidents' data\Accidents DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Accidents' data\Accidents DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Accidents' data\Accidents DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Accidents' data.Paths[Flat File Source Output]"
+              endId="Package\Import Accidents' data\Accidents DB Insert.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import Accidents' data\Accidents.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Casualties' data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C3D158A2-C46E-4B06-8999-FCA32185A583}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Casualties' data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Casualties' data\Casualties"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1032"
+              name="Casualties"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Casualties' data\Casualties.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[casualties_manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[casualties_manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="14"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      name="Casualty_Reference"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]"
+                      name="Sex_of_Casualty"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Severity]"
+                      name="Casualty_Severity"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      dataType="i1"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
+                      dataType="i1"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Class]"
+                      dataType="i1"
+                      name="Casualty_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Casualty]"
+                      dataType="i1"
+                      name="Sex_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Age_of_Casualty]"
+                      dataType="i1"
+                      name="Age_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Casualty]"
+                      dataType="i1"
+                      name="Age_Band_of_Casualty" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Severity]"
+                      dataType="i1"
+                      name="Casualty_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Location]"
+                      dataType="i1"
+                      name="Pedestrian_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Movement]"
+                      dataType="i1"
+                      name="Pedestrian_Movement" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Car_Passenger]"
+                      dataType="i1"
+                      name="Car_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Bus_or_Coach_Passenger]"
+                      dataType="i1"
+                      name="Bus_or_Coach_Passenger" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Road_Maintenance_Worker]"
+                      dataType="i1"
+                      name="Pedestrian_Road_Maintenance_Worker" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Type]"
+                      dataType="i1"
+                      name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Home_Area_Type]"
+                      dataType="i1"
+                      name="Casualty_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1253"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Casualties' data\Casualties DB Insert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Casualties DB Insert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Casualties]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Casualties' data\Casualties DB Insert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DB_connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB_connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[acc_id]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_id]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].Columns[Casualty_Reference]"
+                      cachedDataType="i1"
+                      cachedName="Casualty_Reference"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_id]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]" />
+                    <inputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].Columns[Sex_of_Casualty]"
+                      cachedDataType="i1"
+                      cachedName="Sex_of_Casualty"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_sex]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Sex_of_Casualty]" />
+                    <inputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].Columns[Casualty_Severity]"
+                      cachedDataType="i1"
+                      cachedName="Casualty_Severity"
+                      externalMetadataColumnId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_sev]"
+                      lineageId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output].Columns[Casualty_Severity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[acc_id]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="acc_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_id]"
+                      dataType="ui1"
+                      name="veh_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_id]"
+                      dataType="ui1"
+                      name="cas_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_sex]"
+                      dataType="ui1"
+                      name="cas_sex" />
+                    <externalMetadataColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[cas_sev]"
+                      dataType="ui1"
+                      name="cas_sev" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Casualties' data\Casualties DB Insert.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Casualties' data\Casualties DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Casualties' data\Casualties DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Casualties' data\Casualties DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Casualties' data.Paths[Flat File Source Output]"
+              endId="Package\Import Casualties' data\Casualties DB Insert.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import Casualties' data\Casualties.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Vehicles' data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{33067162-14cd-4b28-9998-853cd1e88322}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="2057"
+      DTS:ObjectName="Import Vehicles' data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Vehicles' data\Vehicles"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1032"
+              name="Vehicles"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Vehicles' data\Vehicles.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vehicles_manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[vehicles_manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      length="14"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]"
+                      name="Engine_Capacity_(CC)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      dataType="i1"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Type]"
+                      dataType="i1"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Towing_and_Articulation]"
+                      dataType="i8"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="i8"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="i8"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Junction_Location]"
+                      dataType="i8"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="i8"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="i8"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="i8"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="i8"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="i8"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="i8"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="i8"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Sex_of_Driver]"
+                      dataType="i1"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Age_of_Driver]"
+                      dataType="i1"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="i8"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="i4"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Propulsion_Code]"
+                      dataType="i8"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Age_of_Vehicle]"
+                      dataType="i1"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="i8"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="i8"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Vehicles' data\Vehicles DB Insert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Vehicles DB Insert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Vehicles]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Vehicles' data\Vehicles DB Insert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DB_connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[DB_connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="14"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[acc_id]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_id]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
+                      cachedDataType="i1"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_type]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Sex_of_Driver"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[dr_sex]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      cachedDataType="i1"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[dr_age]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="i1"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_age]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].Columns[Engine_Capacity_(CC)]"
+                      cachedDataType="i4"
+                      cachedName="Engine_Capacity_(CC)"
+                      externalMetadataColumnId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[engine_cc]"
+                      lineageId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output].Columns[Engine_Capacity_(CC)]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[acc_id]"
+                      codePage="1253"
+                      dataType="str"
+                      length="14"
+                      name="acc_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_id]"
+                      dataType="ui1"
+                      name="veh_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_type]"
+                      dataType="ui1"
+                      name="veh_type" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[dr_age]"
+                      dataType="ui1"
+                      name="dr_age" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[dr_sex]"
+                      dataType="ui1"
+                      name="dr_sex" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[veh_age]"
+                      dataType="ui1"
+                      name="veh_age" />
+                    <externalMetadataColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input].ExternalColumns[engine_cc]"
+                      dataType="i4"
+                      name="engine_cc" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Vehicles' data\Vehicles DB Insert.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Vehicles' data\Vehicles DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Vehicles' data\Vehicles DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Vehicles' data\Vehicles DB Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Vehicles' data.Paths[Flat File Source Output]"
+              endId="Package\Import Vehicles' data\Vehicles DB Insert.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import Vehicles' data\Vehicles.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Accidents Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{48EBE004-21CE-497D-B85C-2D3156CC35AF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Accidents Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5FE8842C-0BCB-470F-B546-F13FCFE974A5}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DELETE FROM Accidents;&#xA;TRUNCATE TABLE FACT_TABLE;&#xA;DELETE FROM DIM_DATE;&#xA;DELETE FROM DIM_POLICE;&#xA;DELETE FROM DIM_LOCATION;&#xA;DELETE FROM DIM_CASUALTIES;&#xA;DELETE FROM DIM_VEHICLE;&#xA;DELETE FROM DIM_AGE_SEX_DRIVER;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Dimmensions"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{05556CC4-435D-4401-AC08-15AFFFEF6846}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Dimmensions"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5FE8842C-0BCB-470F-B546-F13FCFE974A5}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="EXEC dim_date_update;&#xA;EXEC dim_police_update;&#xA;EXEC dim_location_update;&#xA;EXEC dim_vehicle_update;&#xA;EXEC dim_age_update;&#xA;EXEC dim_casualties_update;&#xA;EXEC fact_table_update;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{03F6F3D9-5484-470B-BCFD-59BDCBF9C1F5}"
+      DTS:From="Package\Truncate Accidents Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import Accidents' data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{93A1C59E-5A9F-4FCC-B776-E83127FDDF6F}"
+      DTS:From="Package\Import Accidents' data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Import Vehicles' data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{6261E5B3-6C40-49ED-9C24-A9442D11100C}"
+      DTS:From="Package\Cleanup DB"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Update Dimmensions" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{6AA291B5-B108-4D52-AF8A-A3BF9BB2FF1D}"
+      DTS:From="Package\Import Vehicles' data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Import Casualties' data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{07C82000-0986-4DDC-9FC4-9F04D6235609}"
+      DTS:From="Package\Import Casualties' data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Cleanup DB" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Cleanup DB"
+          TopLeft="396,337" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Import Accidents' data"
+          TopLeft="374,137.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Import Casualties' data"
+          TopLeft="371,269" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Import Vehicles' data"
+          TopLeft="370,202.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Truncate Accidents Table"
+          TopLeft="366,69" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Update Dimmensions"
+          TopLeft="374,405" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="466.75,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.5"
+              Start="0,0"
+              End="0,19">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="466.25,179.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="464.25,379">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="465.5,244.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.5"
+              Start="0,0"
+              End="0,17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="465,311">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import Accidents' data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Import Accidents' data\Accidents DB Insert"
+          TopLeft="355,204" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Import Accidents' data\Accidents"
+          TopLeft="380,112" />
+        <EdgeLayout
+          Id="Package\Import Accidents' data.Paths[Flat File Source Output]"
+          TopLeft="442,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Accidents' data\Accidents DB Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import Casualties' data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Import Casualties' data\Casualties DB Insert"
+          TopLeft="290,220" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Import Casualties' data\Casualties"
+          TopLeft="315,132" />
+        <EdgeLayout
+          Id="Package\Import Casualties' data.Paths[Flat File Source Output]"
+          TopLeft="378.5,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Casualties' data\Casualties DB Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import Vehicles' data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Import Vehicles' data\Vehicles DB Insert"
+          TopLeft="351,191" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Import Vehicles' data\Vehicles"
+          TopLeft="375,94" />
+        <EdgeLayout
+          Id="Package\Import Vehicles' data.Paths[Flat File Source Output]"
+          TopLeft="434.5,136">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Vehicles' data\Vehicles DB Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,152 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bfbad737-7734-4fc3-871f-bba7d5975e29" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM VEHICLE</ID>
+  <Name>DIM VEHICLE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a957b883-8d06-41b1-895d-349b60a1231c">
+    <DataSourceViewID>Prohgmena</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="dc36db4f-4688-4527-b9f7-0de8b93dfe86">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="396dd842-d240-48a4-9945-2a043cc1a480">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e8ca3ee9-8aeb-4a91-971e-f5c9ec8234d5">
+          <DataType>WChar</DataType>
+          <DataSize>14</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d5e744ed-1732-4488-9866-d48a93c5c97d">
+            <TableID>dbo_DIM_VEHICLE</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3e95b372-ed25-4d68-883f-65a1237a731f">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e5487d29-302d-4e1d-8eed-c42d4af948b7">
+            <TableID>dbo_DIM_VEHICLE</TableID>
+            <ColumnID>veh_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b2836fa5-0b0e-4447-92a7-ce4b765ed969">
+        <DataType>WChar</DataType>
+        <DataSize>18</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="01649bbe-6b6f-4811-9173-4c227262041a">
+          <TableID>dbo_DIM_VEHICLE</TableID>
+          <ColumnID>veh_key</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5ecbaeb8-c3fa-4d1c-858b-4a25fcd14b26">
+          <AttributeID>Veh Type</AttributeID>
+          <Name>Veh Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4be604f9-c8d2-4f33-9c18-587e9fea7f4e">
+          <AttributeID>Veh Engine</AttributeID>
+          <Name>Veh Engine</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d31142a7-1a44-4eed-9975-8e0a337e9fde">
+          <AttributeID>Veh Age</AttributeID>
+          <Name>Veh Age</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fbef24d2-3749-45b1-93b6-b0122fd6a3cd">
+      <ID>Veh Type</ID>
+      <Name>Veh Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5ad2e468-566a-4e87-938c-f4cc08ec5add">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08e382d2-dd89-4384-b846-47454e87d882">
+            <TableID>dbo_DIM_VEHICLE</TableID>
+            <ColumnID>veh_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e0fe02b9-3da6-45de-9286-ac357ede4e5c">
+      <ID>Veh Engine</ID>
+      <Name>Veh Engine</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f6bd548-9135-4307-90f4-5342bd03af91">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a2b314e-2d5b-4283-ae3b-5738809074a3">
+            <TableID>dbo_DIM_VEHICLE</TableID>
+            <ColumnID>veh_engine</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7bd01dd0-2350-4842-8a55-399b6dfacc64">
+      <ID>Veh Age</ID>
+      <Name>Veh Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="53df2227-99a8-46cd-9288-523b8d267c5c">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="43bc29ba-b11e-4e77-bc73-72b479f0719b">
+            <TableID>dbo_DIM_VEHICLE</TableID>
+            <ColumnID>veh_age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

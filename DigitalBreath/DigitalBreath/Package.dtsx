@@ -1,0 +1,1234 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/1/2017 3:38:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MEMAS-HP"
+  DTS:CreatorName="Memas-HP\Memas"
+  DTS:DTSID="{93373ADC-1ECC-4BA5-8B5C-A1EF25FE2E25}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LocaleID="1032"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{8A8207D8-95F8-49B5-9F5B-897A878FDC13}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DigitalBreath_FlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{435FAF7F-5C3D-4591-8AC2-C0207EAD82D4}"
+      DTS:ObjectName="DigitalBreath_FlatFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::Filename]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1032"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1253">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reason"
+              DTS:DTSID="{77986D9E-B6A6-4660-9600-C13721ED9347}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{6FF40A29-25FB-4CAC-A855-E56A91D60B3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{6358277C-7420-4262-8954-E3ABABB21965}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekType"
+              DTS:DTSID="{414E5D4A-6429-41DF-A991-1AC4C94FAFB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeBand"
+              DTS:DTSID="{A031664F-5B7E-415E-A380-007084048B25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BreathAlcoholLevel(microg 100ml)"
+              DTS:DTSID="{AFC29617-9D0A-4059-A547-7B45881C6489}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AgeBand"
+              DTS:DTSID="{75CF1B79-6489-4470-848E-EC39C786F14C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{0E112BFF-4018-4FCB-AFAA-0514CC74362E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MEMAS-HP.ProDigitalBreath]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4584E778-444C-4286-B948-A25642230892}"
+      DTS:ObjectName="MEMAS-HP.ProDigitalBreath">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MEMAS-HP;Initial Catalog=ProDigitalBreath;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F260CBDE-CEA0-4A9F-9B1A-10B648314143}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Filename">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clear Database"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{688658CE-09C3-42FA-837E-A3CFBF2AD3EE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clear Database"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4584E778-444C-4286-B948-A25642230892}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Digital_Breath;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{FA5319B9-FAA1-4450-9DC7-31E6E4B383BC}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{8B5714FC-3A9B-424B-97AE-AC3127DB7DDC}"
+        DTS:ObjectName="{8B5714FC-3A9B-424B-97AE-AC3127DB7DDC}">
+        <DTS:PropertyExpression
+          DTS:Name="Name">@[User::Filename]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="./datasets" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Import Digital Breath"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{684C45FF-13E1-4A33-B30B-31CF50DBF221}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Import Digital Breath"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[Reason]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Reason"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Reason]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[Month]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Month"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Month]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[Year]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Year"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Year]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[WeekType]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="WeekType"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[WeekType]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[TimeBand]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="TimeBand"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[TimeBand]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[BreathAlcoholLevel(microg 100ml)]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="BreathAlcoholLevel(microg 100ml)"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[BreathAlcoholLevel(microg 100ml)]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[AgeBand]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="AgeBand"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[AgeBand]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input].Columns[Gender]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Gender"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Gender]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reason]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reason]"
+                          name="Copy of Reason"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Reason]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Month]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Month]"
+                          name="Copy of Month"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Month]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Year]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Year]"
+                          name="Copy of Year"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Year]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekType]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="8"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekType]"
+                          name="Copy of WeekType"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[WeekType]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TimeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TimeBand]"
+                          name="Copy of TimeBand"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[TimeBand]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BreathAlcoholLevel(microg 100ml)]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BreathAlcoholLevel(microg 100ml)]"
+                          name="Copy of BreathAlcoholLevel(microg 100ml)"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[BreathAlcoholLevel(microg 100ml)]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AgeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AgeBand]"
+                          name="Copy of AgeBand"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[AgeBand]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="IgnoreFailure"
+                          length="6"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
+                          name="Copy of Gender"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Gender]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import Digital Breath\File import"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1032"
+                  name="File import"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Import Digital Breath\File import.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DigitalBreath_FlatFile]"
+                      connectionManagerRefId="Package.ConnectionManagers[DigitalBreath_FlatFile]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Reason]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Reason]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Reason]"
+                          name="Reason"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Month]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Year]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Year]"
+                          name="Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[WeekType]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[WeekType]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[WeekType]"
+                          name="WeekType"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[TimeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[TimeBand]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[TimeBand]"
+                          name="TimeBand"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[BreathAlcoholLevel(microg 100ml)]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[BreathAlcoholLevel(microg 100ml)]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[BreathAlcoholLevel(microg 100ml)]"
+                          name="BreathAlcoholLevel(microg 100ml)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[AgeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[AgeBand]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[AgeBand]"
+                          name="AgeBand"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Gender]"
+                          codePage="1253"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].Columns[Gender]"
+                          name="Gender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Reason]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="Reason" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[WeekType]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="WeekType" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[TimeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="TimeBand" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[BreathAlcoholLevel(microg 100ml)]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="BreathAlcoholLevel(microg 100ml)" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[AgeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="AgeBand" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                          codePage="1253"
+                          dataType="str"
+                          length="50"
+                          name="Gender" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1253"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Digital_Breath]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1253</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[MEMAS-HP.ProDigitalBreath]"
+                      connectionManagerRefId="Package.ConnectionManagers[MEMAS-HP.ProDigitalBreath]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="IgnoreFailure"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reason]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Copy of Reason"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reason]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Month]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Copy of Month"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Month]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Year]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="Copy of Year"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Year]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of WeekType]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="8"
+                          cachedName="Copy of WeekType"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekType]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekType]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of TimeBand]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Copy of TimeBand"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeBand]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TimeBand]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of AgeBand]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="Copy of AgeBand"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AgeBand]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AgeBand]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Gender]"
+                          cachedCodepage="1253"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="Copy of Gender"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of BreathAlcoholLevel(microg 100ml)]"
+                          cachedDataType="i4"
+                          cachedName="Copy of BreathAlcoholLevel(microg 100ml)"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BreathAlcoholLevel]"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BreathAlcoholLevel(microg 100ml)]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reason]"
+                          codePage="1253"
+                          dataType="str"
+                          length="30"
+                          name="Reason" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                          codePage="1253"
+                          dataType="str"
+                          length="4"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          codePage="1253"
+                          dataType="str"
+                          length="4"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekType]"
+                          codePage="1253"
+                          dataType="str"
+                          length="8"
+                          name="WeekType" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          length="10"
+                          name="TimeBand" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AgeBand]"
+                          codePage="1253"
+                          dataType="str"
+                          length="6"
+                          name="AgeBand" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                          codePage="1253"
+                          dataType="str"
+                          length="6"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                          dataType="i4"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BreathAlcoholLevel]"
+                          dataType="i4"
+                          name="BreathAlcoholLevel" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling"
+                  componentClassID="Microsoft.PctSampling"
+                  contactInfo="Percentage Sampling;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Randomly samples a percentage of rows from an input data flow. For example, use it twice to help create a data mining model: create one sample for training the model and another sample for testing the model."
+                  name="Percentage Sampling">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage size of the sample."
+                      expressionType="Notify"
+                      name="SamplingValue">3</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the seed for the random number generator."
+                      name="SamplingSeed">0</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Inputs[Percentage Sampling Input 1]"
+                      name="Percentage Sampling Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Outputs[Sampling Selected Output]"
+                      exclusionGroup="1"
+                      name="Sampling Selected Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Inputs[Percentage Sampling Input 1]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Output for rows in the sample"
+                          name="Selected">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Outputs[Sampling Unselected Output]"
+                      exclusionGroup="1"
+                      name="Sampling Unselected Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Inputs[Percentage Sampling Input 1]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Output for rows in the sample"
+                          name="Selected">false</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Import Digital Breath.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Import Digital Breath.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Inputs[Percentage Sampling Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Import Digital Breath\File import.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Import Digital Breath.Paths[Sampling Selected Output]"
+                  endId="Package\Foreach Loop Container\Import Digital Breath\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Sampling Selected Output"
+                  startId="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling.Outputs[Sampling Selected Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{75A4521E-712C-47A4-A0AF-7A12AD37DD26}"
+          DTS:ObjectName="{75A4521E-712C-47A4-A0AF-7A12AD37DD26}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Filename" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C28ED2F1-0061-4E1D-9377-7B87CAF08A2F}"
+      DTS:From="Package\Clear Database"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Clear Database"
+          TopLeft="359,74" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Foreach Loop Container\Import Digital Breath"
+          TopLeft="19,22" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="223,94"
+          Size="223,137"
+          Id="Package\Foreach Loop Container"
+          TopLeft="326,163" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="436.25,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Import Digital Breath">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Foreach Loop Container\Import Digital Breath\File import"
+          TopLeft="446,118" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination"
+          TopLeft="427,385" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Foreach Loop Container\Import Digital Breath\Percentage Sampling"
+          TopLeft="421,197" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Foreach Loop Container\Import Digital Breath\Data Conversion"
+          TopLeft="433,289" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import Digital Breath.Paths[Sampling Selected Output]"
+          TopLeft="511.5,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.94205078125,15.41845703125,115.8841015625,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import Digital Breath.Paths[Flat File Source Output]"
+          TopLeft="511.25,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import Digital Breath.Paths[Data Conversion Output]"
+          TopLeft="512.75,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Import Digital Breath\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
